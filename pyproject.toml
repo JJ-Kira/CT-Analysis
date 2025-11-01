@@ -1,0 +1,14 @@
+[project]
+name = "python3 UMK project"
+version = "0.0.1"
+description = "TBA."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["h5py"]
+authors = [
+    {name = "Julia Szczuczko", email = "j.k.szczuczko@doktorant.umk.pl"},
+]
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
