@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="818pt" height="321pt" viewBox="0.00 0.00 818.00 321.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 316.5)">
+<title>CTAnalysis</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-316.5 814.36,-316.5 814.36,4 -4,4"/>
+<text xml:space="preserve" text-anchor="middle" x="405.18" y="-299.5" font-family="Times,serif" font-size="10.00">ct_analysis — structural class diagram</text>
+<!-- DomainSpec -->
+<g id="node1" class="node">
+<title>DomainSpec</title>
+<polygon fill="none" stroke="black" points="556.95,-184 556.95,-228 810.36,-228 810.36,-184 556.95,-184"/>
+<text xml:space="preserve" text-anchor="middle" x="590.78" y="-203" font-family="Times,serif" font-size="10.00">DomainSpec</text>
+<polyline fill="none" stroke="black" points="624.61,-184 624.61,-228"/>
+<text xml:space="preserve" text-anchor="start" x="632.61" y="-209" font-family="Times,serif" font-size="10.00">+ atoms_to_domain: dict</text>
+<text xml:space="preserve" text-anchor="start" x="632.61" y="-197" font-family="Times,serif" font-size="10.00">+ colors: dict</text>
+<polyline fill="none" stroke="black" points="740.68,-184 740.68,-228"/>
+<text xml:space="preserve" text-anchor="start" x="748.68" y="-215" font-family="Times,serif" font-size="10.00">+ validate()</text>
+<text xml:space="preserve" text-anchor="start" x="748.68" y="-203" font-family="Times,serif" font-size="10.00">+ from_xyz()</text>
+<text xml:space="preserve" text-anchor="start" x="748.68" y="-191" font-family="Times,serif" font-size="10.00">+ to_xyz()</text>
+</g>
+<!-- CTMatrix -->
+<g id="node2" class="node">
+<title>CTMatrix</title>
+<polygon fill="none" stroke="black" points="573.9,-248 573.9,-292 793.41,-292 793.41,-248 573.9,-248"/>
+<text xml:space="preserve" text-anchor="middle" x="601.9" y="-267" font-family="Times,serif" font-size="10.00">CTMatrix</text>
+<polyline fill="none" stroke="black" points="629.89,-248 629.89,-292"/>
+<text xml:space="preserve" text-anchor="start" x="637.89" y="-267" font-family="Times,serif" font-size="10.00">+ matrix: float[][]</text>
+<polyline fill="none" stroke="black" points="717.06,-248 717.06,-292"/>
+<text xml:space="preserve" text-anchor="start" x="725.06" y="-279" font-family="Times,serif" font-size="10.00">+ add(A,B,val)</text>
+<text xml:space="preserve" text-anchor="start" x="725.06" y="-267" font-family="Times,serif" font-size="10.00">+ normalize()</text>
+<text xml:space="preserve" text-anchor="start" x="725.06" y="-255" font-family="Times,serif" font-size="10.00">+ to_numpy()</text>
+</g>
+<!-- Analysis -->
+<g id="node3" class="node">
+<title>Analysis</title>
+<polygon fill="none" stroke="black" points="256.11,-198 256.11,-234 442.47,-234 442.47,-198 256.11,-198"/>
+<text xml:space="preserve" text-anchor="middle" x="281.61" y="-213" font-family="Times,serif" font-size="10.00">Analysis</text>
+<polyline fill="none" stroke="black" points="307.11,-198 307.11,-234"/>
+<text xml:space="preserve" text-anchor="start" x="315.11" y="-219" font-family="Times,serif" font-size="10.00">+ run()</text>
+<text xml:space="preserve" text-anchor="start" x="315.11" y="-207" font-family="Times,serif" font-size="10.00">+ export()</text>
+<polyline fill="none" stroke="black" points="363.46,-198 363.46,-234"/>
+<text xml:space="preserve" text-anchor="start" x="371.46" y="-219" font-family="Times,serif" font-size="10.00">- _accumulate()</text>
+<text xml:space="preserve" text-anchor="start" x="371.46" y="-207" font-family="Times,serif" font-size="10.00"> - _finalize()</text>
+</g>
+<!-- Analysis&#45;&gt;DomainSpec -->
+<g id="edge1" class="edge">
+<title>Analysis-&gt;DomainSpec</title>
+<path fill="none" stroke="black" d="M442.91,-215.85C473.49,-215.58 507.69,-215.04 538.95,-214 541.1,-213.93 543.28,-213.85 545.46,-213.77"/>
+<polygon fill="black" stroke="black" points="555.28,-213.39 545.46,-218.28 551.5,-213.54 545.29,-213.78 545.29,-213.78 545.29,-213.78 551.5,-213.54 545.11,-209.28 555.28,-213.39"/>
+<text xml:space="preserve" text-anchor="middle" x="499.71" y="-218.36" font-family="Times,serif" font-size="9.00">uses</text>
+</g>
+<!-- Analysis&#45;&gt;CTMatrix -->
+<g id="edge2" class="edge">
+<title>Analysis-&gt;CTMatrix</title>
+<path fill="none" stroke="black" d="M442.87,-231.04C479.92,-237.06 523.08,-244.07 562.49,-250.48"/>
+<polygon fill="black" stroke="black" points="572.3,-252.07 561.7,-254.91 568.56,-251.46 562.43,-250.47 562.43,-250.47 562.43,-250.47 568.56,-251.46 563.15,-246.02 572.3,-252.07"/>
+<text xml:space="preserve" text-anchor="middle" x="499.71" y="-248.93" font-family="Times,serif" font-size="9.00">builds</text>
+</g>
+<!-- IO -->
+<g id="node4" class="node">
+<title>IO</title>
+<polygon fill="none" stroke="black" points="287.58,-69 287.58,-125 411.01,-125 411.01,-69 287.58,-69"/>
+<text xml:space="preserve" text-anchor="middle" x="300.85" y="-94" font-family="Times,serif" font-size="10.00">IO</text>
+<polyline fill="none" stroke="black" points="314.13,-69 314.13,-125"/>
+<text xml:space="preserve" text-anchor="start" x="322.13" y="-112" font-family="Times,serif" font-size="10.00">+ read_checkpoint()</text>
+<text xml:space="preserve" text-anchor="start" x="322.13" y="-100" font-family="Times,serif" font-size="10.00">+ read_orbitals()</text>
+<text xml:space="preserve" text-anchor="start" x="322.13" y="-88" font-family="Times,serif" font-size="10.00">+ load_domains()</text>
+<text xml:space="preserve" text-anchor="start" x="322.13" y="-76" font-family="Times,serif" font-size="10.00">+ save_results()</text>
+</g>
+<!-- Analysis&#45;&gt;IO -->
+<g id="edge3" class="edge">
+<title>Analysis-&gt;IO</title>
+<path fill="none" stroke="black" d="M255.83,-198.2C220.32,-186.98 192.4,-169.57 211.05,-143.6 226.31,-122.36 251.74,-110.67 276.67,-104.29"/>
+<polygon fill="black" stroke="black" points="286.1,-102.13 277.35,-108.75 282.41,-102.98 276.35,-104.36 276.35,-104.36 276.35,-104.36 282.41,-102.98 275.35,-99.97 286.1,-102.13"/>
+<text xml:space="preserve" text-anchor="middle" x="209.49" y="-146.3" font-family="Times,serif" font-size="9.00">reads/writes</text>
+</g>
+<!-- CLI -->
+<g id="node5" class="node">
+<title>CLI</title>
+<polygon fill="none" stroke="black" points="0,-198 0,-234 162.88,-234 162.88,-198 0,-198"/>
+<text xml:space="preserve" text-anchor="middle" x="47.71" y="-219" font-family="Times,serif" font-size="10.00">CLI (main)</text>
+<text xml:space="preserve" text-anchor="middle" x="47.71" y="-207" font-family="Times,serif" font-size="10.00">ct_analysis.cli.main</text>
+<polyline fill="none" stroke="black" points="95.42,-198 95.42,-234"/>
+<text xml:space="preserve" text-anchor="start" x="103.42" y="-213" font-family="Times,serif" font-size="10.00">+ main(args)</text>
+</g>
+<!-- CLI&#45;&gt;Analysis -->
+<g id="edge4" class="edge">
+<title>CLI-&gt;Analysis</title>
+<path fill="none" stroke="black" stroke-width="2" d="M163.29,-216C188.82,-216 217.39,-216 244.3,-216"/>
+<polygon fill="black" stroke="black" stroke-width="2" points="242.7,-219.5 252.7,-216 242.7,-212.5 242.7,-219.5"/>
+<text xml:space="preserve" text-anchor="middle" x="209.49" y="-218.7" font-family="Times,serif" font-size="9.00">invokes run()</text>
+</g>
+<!-- Picker -->
+<g id="node6" class="node">
+<title>Picker</title>
+<polygon fill="none" stroke="black" points="21.38,-105 21.38,-149 141.49,-149 141.49,-105 21.38,-105"/>
+<text xml:space="preserve" text-anchor="middle" x="42.16" y="-124" font-family="Times,serif" font-size="10.00">Picker</text>
+<polyline fill="none" stroke="black" points="62.93,-105 62.93,-149"/>
+<text xml:space="preserve" text-anchor="start" x="70.93" y="-136" font-family="Times,serif" font-size="10.00">+ assign()</text>
+<text xml:space="preserve" text-anchor="start" x="70.93" y="-124" font-family="Times,serif" font-size="10.00">+ unassign()</text>
+<text xml:space="preserve" text-anchor="start" x="70.93" y="-112" font-family="Times,serif" font-size="10.00">+ lasso_select()</text>
+</g>
+<!-- Picker&#45;&gt;DomainSpec -->
+<g id="edge5" class="edge">
+<title>Picker-&gt;DomainSpec</title>
+<path fill="none" stroke="black" d="M141.86,-145.96C154.62,-149.45 168.11,-152.71 180.88,-155 338,-183.2 380.44,-164.15 538.95,-183 541.11,-183.26 543.3,-183.52 545.49,-183.8"/>
+<polygon fill="black" stroke="black" points="555.35,-185.07 544.86,-188.25 551.6,-184.59 545.44,-183.79 545.44,-183.79 545.44,-183.79 551.6,-184.59 546.01,-179.33 555.35,-185.07"/>
+<text xml:space="preserve" text-anchor="middle" x="349.29" y="-177.43" font-family="Times,serif" font-size="9.00">mutates</text>
+</g>
+<!-- Viewer -->
+<g id="node7" class="node">
+<title>Viewer</title>
+<polygon fill="none" stroke="black" points="290.62,-6 290.62,-50 407.96,-50 407.96,-6 290.62,-6"/>
+<text xml:space="preserve" text-anchor="middle" x="313.34" y="-25" font-family="Times,serif" font-size="10.00">Viewer</text>
+<polyline fill="none" stroke="black" points="336.05,-6 336.05,-50"/>
+<text xml:space="preserve" text-anchor="start" x="344.05" y="-37" font-family="Times,serif" font-size="10.00">+ load_html()</text>
+<text xml:space="preserve" text-anchor="start" x="344.05" y="-25" font-family="Times,serif" font-size="10.00">+ set_model()</text>
+<text xml:space="preserve" text-anchor="start" x="344.05" y="-13" font-family="Times,serif" font-size="10.00">+ highlight()</text>
+</g>
+<!-- Picker&#45;&gt;Viewer -->
+<g id="edge8" class="edge">
+<title>Picker-&gt;Viewer</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M137.71,-104.56C171.7,-90.96 216.25,-73.5 256.11,-59 263.83,-56.19 271.95,-53.33 280.04,-50.54"/>
+<polygon fill="black" stroke="black" points="289.45,-47.31 281.45,-54.81 285.88,-48.54 279.99,-50.55 279.99,-50.55 279.99,-50.55 285.88,-48.54 278.54,-46.29 289.45,-47.31"/>
+<text xml:space="preserve" text-anchor="middle" x="209.49" y="-88.88" font-family="Times,serif" font-size="9.00">selection events</text>
+</g>
+<!-- WebChannel -->
+<g id="node8" class="node">
+<title>WebChannel</title>
+<polygon fill="none" stroke="black" points="609.71,-127 609.71,-163 757.59,-163 757.59,-127 609.71,-127"/>
+<text xml:space="preserve" text-anchor="middle" x="643.81" y="-142" font-family="Times,serif" font-size="10.00">WebChannel</text>
+<polyline fill="none" stroke="black" points="677.92,-127 677.92,-163"/>
+<text xml:space="preserve" text-anchor="start" x="685.92" y="-148" font-family="Times,serif" font-size="10.00">+ send_event()</text>
+<text xml:space="preserve" text-anchor="start" x="685.92" y="-136" font-family="Times,serif" font-size="10.00">+ on_message()</text>
+</g>
+<!-- Viewer&#45;&gt;WebChannel -->
+<g id="edge6" class="edge">
+<title>Viewer-&gt;WebChannel</title>
+<path fill="none" stroke="black" d="M408.37,-47.34C419.7,-51.17 431.47,-55.18 442.47,-59 503.67,-80.24 573.35,-105.29 621.83,-122.85"/>
+<polygon fill="black" stroke="black" points="631,-126.18 620.07,-127 627.45,-124.89 621.6,-122.77 621.6,-122.77 621.6,-122.77 627.45,-124.89 623.14,-118.54 631,-126.18"/>
+<text xml:space="preserve" text-anchor="middle" x="499.71" y="-94.34" font-family="Times,serif" font-size="9.00">communicates</text>
+</g>
+<!-- Assets -->
+<g id="node9" class="node">
+<title>Assets</title>
+<polygon fill="none" stroke="black" points="126.03,-56 123.03,-60 102.03,-60 99.03,-56 36.85,-56 36.85,0 126.03,0 126.03,-56"/>
+<text xml:space="preserve" text-anchor="start" x="44.85" y="-43" font-family="Times,serif" font-size="10.00">{assets|index.html</text>
+<text xml:space="preserve" text-anchor="start" x="44.85" y="-31" font-family="Times,serif" font-size="10.00">viewer.js</text>
+<text xml:space="preserve" text-anchor="start" x="44.85" y="-19" font-family="Times,serif" font-size="10.00">3Dmol.min.js</text>
+<text xml:space="preserve" text-anchor="middle" x="81.44" y="-7" font-family="Times,serif" font-size="10.00">}</text>
+</g>
+<!-- Viewer&#45;&gt;Assets -->
+<g id="edge7" class="edge">
+<title>Viewer-&gt;Assets</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M290.36,-28C244.87,-28 181.96,-28 137.28,-28"/>
+<polygon fill="black" stroke="black" points="127.56,-28 137.56,-23.5 131.34,-28 137.56,-28 137.56,-28 137.56,-28 131.34,-28 137.56,-32.5 127.56,-28"/>
+<text xml:space="preserve" text-anchor="middle" x="209.49" y="-30.7" font-family="Times,serif" font-size="9.00">loads</text>
+</g>
+<!-- WebChannel&#45;&gt;Analysis -->
+<g id="edge9" class="edge">
+<title>WebChannel-&gt;Analysis</title>
+<path fill="none" stroke="black" stroke-dasharray="1,5" d="M609.29,-160.67C561.75,-170.83 499.28,-184.17 447.6,-195.21"/>
+<polygon fill="black" stroke="black" points="437.94,-197.28 446.78,-190.79 441.64,-196.49 447.72,-195.19 447.72,-195.19 447.72,-195.19 441.64,-196.49 448.66,-199.59 437.94,-197.28"/>
+<text xml:space="preserve" text-anchor="middle" x="499.71" y="-193.71" font-family="Times,serif" font-size="9.00">optional: trigger run()</text>
+</g>
+</g>
+</svg>

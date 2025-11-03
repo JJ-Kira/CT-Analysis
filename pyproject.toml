@@ -1,12 +1,12 @@
 [project]
-name = "python3 UMK project"
+name = "Charge Transfer Analysis"
 version = "0.0.1"
-description = "TBA."
+description = "A modular Python tool for analyzing electronic charge transfer between molecular domains, derived from the PyBEST framework."
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = ["h5py"]
+dependencies = ["h5py","pybest"]
 authors = [
-    {name = "Julia Szczuczko", email = "j.k.szczuczko@doktorant.umk.pl"},
+    {name = "Julia Szczuczko", email = "j.k.szczuczko@gmail.com"},
 ]
 
 [build-system]

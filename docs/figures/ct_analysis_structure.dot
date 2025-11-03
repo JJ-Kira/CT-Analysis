@@ -1,0 +1,57 @@
+// ct_analysis structural class diagram (Graphviz DOT)
+digraph CTAnalysis {
+    rankdir=LR;
+    graph [fontsize=10, labelloc="t", label="ct_analysis — structural class diagram"];
+    node  [shape=record, fontsize=10];
+    edge  [fontsize=9];
+
+    // ==== Packages as clusters ====
+    subgraph cluster_core {
+        label="core";
+        color="#999999";
+        style="rounded";
+
+        DomainSpec [label="{DomainSpec|+ atoms_to_domain: dict\\l+ colors: dict\\l|+ validate()\\l+ from_xyz()\\l+ to_xyz()\\l}"];
+        CTMatrix   [label="{CTMatrix|+ matrix: float[][]\\l|+ add(A,B,val)\\l+ normalize()\\l+ to_numpy()\\l}"];
+        Analysis   [label="{Analysis|+ run()\\l+ export()\\l| - _accumulate()\\l - _finalize()\\l}"];
+        IO         [label="{IO|+ read_checkpoint()\\l+ read_orbitals()\\l+ load_domains()\\l+ save_results()\\l}"];
+    }
+
+    subgraph cluster_cli {
+        label="cli";
+        color="#999999";
+        style="rounded";
+        CLI [label="{CLI (main)\\nct_analysis.cli.main|+ main(args)\\l}"];
+    }
+
+    subgraph cluster_gui {
+        label="gui";
+        color="#999999";
+        style="rounded";
+        Picker [label="{Picker|+ assign()\\l+ unassign()\\l+ lasso_select()\\l}"];
+        Viewer [label="{Viewer|+ load_html()\\l+ set_model()\\l+ highlight()\\l}"];
+        WebChannel [label="{WebChannel|+ send_event()\\l+ on_message()\\l}"];
+        Assets [label="{assets|index.html\\lviewer.js\\l3Dmol.min.js\\l}", shape=folder];
+    }
+
+    // ==== Relationships ====
+    // Core
+    Analysis -> DomainSpec [label="uses", arrowhead="vee"];
+    Analysis -> CTMatrix   [label="builds", arrowhead="vee"];
+    Analysis -> IO         [label="reads/writes", arrowhead="vee"];
+
+    // CLI
+    CLI -> Analysis [label="invokes run()", style="bold"];
+
+    // GUI
+    Picker -> DomainSpec [label="mutates", arrowhead="vee"];
+    Viewer -> WebChannel [label="communicates", arrowhead="vee"];
+    Viewer -> Assets     [label="loads", arrowhead="vee", style="dashed"];
+    Picker -> Viewer     [label="selection events", style="dashed", arrowhead="vee"];
+    WebChannel -> Analysis [label="optional: trigger run()", style="dotted", arrowhead="vee"];
+
+    // Styling groups
+    {rank=same; CLI}
+    {rank=same; DomainSpec; CTMatrix; Analysis; IO}
+    {rank=same; Picker; Viewer; WebChannel; Assets}
+}
