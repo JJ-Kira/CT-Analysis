@@ -22,7 +22,7 @@ The analysis combines **orbital information** with **user-defined domains**, pro
 
 ## Conceptual Workflow
 
-![Class Diagram](https://github.com/JJ-Kira/CT-Analysis/tree/main/docs/figures/class_diagram.png?raw=true)
+![Class Diagram](https://github.com/JJ-Kira/CT-Analysis/blob/main/docs/figures/class_diagram.png)
 
 
 Each step is modular, allowing the user to either interact with the data programmatically or through an optional GUI.
